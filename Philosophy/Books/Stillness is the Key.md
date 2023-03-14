@@ -24,3 +24,26 @@ This chapter mainly discusses how John F. Kennedy (JFK) kept his composure while
 	- Take our time
 	- Sit quietly and reflect
 	- Reject distraction
+
+# Become Present
+
+> [!Summary]
+The basic idea is just being present. Using all of 'you' to be in the current moment. Leaving the past and future aside and just focusing on the present
+
+- One of the key figures in this chapter is Marina Abramovic. She's a conceptual artist - which I have no idea what it means. Upon a quick Google search, it looks like she's a performance artist. Could be role playing, music, etc.
+- Marina spent about 3 months in one of her performances just sitting and observing the audience. They'd sit in front of her one after the other doing or saying nothing. Just being.
+- The chapter mentions how still and present she was. She didn't let thoughts come in the way or the need to eat/drink something or the need to visit the bathroom. She stayed in the moment with full focus, giving all of her.
+- _"People don't understand that the hardest thing to do is actually doing something that is close to nothing"_
+
+# Limit Your Inputs
+
+> [!Summary]
+Especially in today's time, there's alot of information we're taking in. The goal is to take in only what's necessary and leave the unimportant ones out so as to keep our mind clean and focused on what really matters
+
+- Napolean had this rule of not checking his mail for 3 weeks. This way, he found out that there were lots of matters that were resolved without his intervention. They seemed important enough to involve him but were really not.
+- This feels relatable in today's world where, as a developer, if there's an issue a junior is having, asking you would be the first thing they do. If not replied soon enough, they eventually find the answer or find a way to resolve the issue.
+- Napolean also preferred not listening to the good news in the morning because they don't need tending to. Instead he'd like the bad ones so he had all the time (rest of the day) to work on them.
+- The goal is to make sure we're letting in information that really needs to come in. For example, a random notification on your phone from McDonald's app is useless and adds no value while you're working on something. Having a look at it or hearing the notification can be a distraction to the mind.
+- Even consuming the news might just be adding to this. Unnecessary news at least
+- Cutting down inputs to your mind is the goal. Garbage in, garbage out. If you want good output, you need to watch over your inputs.
+- From the book, "It is in this stillness that we can be present and finally see the truth. It is in this stillness that we can hear the voice inside us"
