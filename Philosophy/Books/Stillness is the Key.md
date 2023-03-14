@@ -47,3 +47,16 @@ Especially in today's time, there's alot of information we're taking in. The goa
 - Even consuming the news might just be adding to this. Unnecessary news at least
 - Cutting down inputs to your mind is the goal. Garbage in, garbage out. If you want good output, you need to watch over your inputs.
 - From the book, "It is in this stillness that we can be present and finally see the truth. It is in this stillness that we can hear the voice inside us"
+
+# Empty Your Mind
+
+> [!Summary]
+Try keeping your mind free of distractions or thoughts when you want full focus
+
+- Example given in this chapter is of a baseball player named Shawn Green. At a point in his career, he was having a hard time playing well. He had lots of thoughts going on in his head - What are the fans gonna say? What's the news gonna show? What's the coach gonna think?
+- He was one of the players who practiced Buddhism. He recalled his learnings about the zen state during this situation he was in.
+- All he needed was to shut off all the thoughts in his head and hit the ball. Not overthinking, not worrying, not being distracted. Just hit the ball.
+- I know its easier said than done but that's the goal
+- When he got inside the pitch, he had hit a lot of home runs and just scored high (for the lack of baseball knowledge) making him one of the few players in the history of baseball to hit 4 home runs in a single game.
+- How he achieved it was by keeping his mind empty. When he started scoring, he saw the crowd/teammates cheer. This can obviously boost your ego sometimes. But he discarded these thoughts too and continued playing.
+- Epictetus says, "If we're anxious or nervous when we make the catch or throw, what will become of the game, and how can one maintain one's composure; how can one see what is coming next?"
