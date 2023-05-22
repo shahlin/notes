@@ -60,3 +60,30 @@ Try keeping your mind free of distractions or thoughts when you want full focus
 - When he got inside the pitch, he had hit a lot of home runs and just scored high (for the lack of baseball knowledge) making him one of the few players in the history of baseball to hit 4 home runs in a single game.
 - How he achieved it was by keeping his mind empty. When he started scoring, he saw the crowd/teammates cheer. This can obviously boost your ego sometimes. But he discarded these thoughts too and continued playing.
 - Epictetus says, "If we're anxious or nervous when we make the catch or throw, what will become of the game, and how can one maintain one's composure; how can one see what is coming next?"
+
+# Slow Down, Think Deeply
+> [!Summary]
+Pretty much the title. Spend time to think about what's important and lot's of things will become clear to you and the truth will start to appear.
+
+- Example given in this chapter is of Fred Rogers, a TV Show host. His show _Mister Rogers' Neighborhood_ always started with a scene of yellow signal blinking. Apparently, it meant that we need to slow down, be considerate, aware and think about things deeply. To have clarity on our thoughts.
+- The goal is to see what is invisible to our eye. Appearances can be quite misleading sometimes which is why we need to take things slow sometimes and fully grasp the current situation before making decisions or reacting negatively towards them.
+- Notable paragraph: We have to get better at thinking, deliberately and intentionally, about the big questions. On the complicated things. On understanding what's really going on with a person, or a situation, or with life itself.
+- A lot of distress comes from reacting to our instincts instead of consciously thought out reactions. We take as certainties impressions we are yet to test.
+- Think about: What's important to you, what's actually going on, what might be hidden from view, what the rest of the chessboard looks like, what the meaning of life really is.
+- Twyla Tharp says: Sit alone in a room and let your thoughts go wherever they will. Do this for one minute... Work up to ten minutes a day of this mindless mental wandering. Then start paying attention to your thoughts to see if a word of goal materializes. If it doesn't, extend the excercise...
+
+# Start Journaling
+> [!Summary]
+Start journaling ¯\\\_(ツ)\_/¯
+
+- This chapter gives the example of Anne Frank who journaled during the time of World War. She couldn't really go out that much so she turned to pen and paper.
+- There's no right or wrong way to go about it. The goal is to put down your thoughts and feelings into paper.
+- What you don't share with others, you can share with the paper (yourself) and reflect on it later if needed.
+
+# Cultivate Silence
+>[!Summary]
+Try to attain moments of silence whenever possible even if its for shorter durations and try to think deep into your lives or about whatever it is that needs thinking
+
+- Silence can be hard to achieve in this day and age because of all the inputs we receive, all the noise around us, all the people around us.
+- Silence doesn't necessarily have to be absence of sound. I think it's the absense of noise. You could be listening to classical music or the sound of the wind and still feel a sense of silence and focus on your thoughts.
+- Absence of voices helps

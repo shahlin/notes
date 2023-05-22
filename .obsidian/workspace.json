@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6606125afd235194",
+        "id": "222ee8ad29b60497",
         "type": "tabs",
         "children": [
           {
-            "id": "3ca3f644e3300827",
+            "id": "1fafd52f9f8fc21c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Philosophy/Books/Stillness is the Key.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Philosophy/Books/Stillness is the Key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Philosophy/Books/Stillness is the Key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Philosophy/Books/Stillness is the Key.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +138,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ca3f644e3300827",
+  "active": "1fafd52f9f8fc21c",
   "lastOpenFiles": [
-    "Tech/SOLID Principles.md",
+    "Tech/Developer Productivity & Wellbeing.md",
     "Philosophy/Books/Stillness is the Key.md",
+    "Screenshot 2023-04-12 at 12.21.56 PM.png.md",
+    "Tech/SOLID Principles.md",
     "Philosophy/Untitled.md",
     "Philosophy/Books",
     "Philosophy",
