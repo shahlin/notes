@@ -28,3 +28,42 @@
 - Hearing this, Haw's fear of failing returned and the thought of finding a new place faded out.
 - Day by day, they grew more frustrated because of the lack of cheese. Hem suggested they stay at the Cheese Station, maybe it would reappear. No luck again.
 - Hem thought there was no change at all and that the cheese might just be nearby. They started making holes and breaking down walls. No luck again.
+
+## Haw Realizes and Accepts Change
+- After a long time of waiting for the cheese to reappear, Haw starts laughing at the whole situation. He finds it funny how they've been waiting for the cheese to appear whereas they should have started to find a new one long ago.
+- Hem still tried pull him down by asking questions like "What if there is no cheese out there?" or "What if you don't find it even if it's there?". Haw didn't care. He had to do something.
+- Haw started to think to himself. He wondered where he could possibly find the cheese. The thought of him venturing out to the maze put a smile on his face.
+- He feels confident and gathers the courage to set out to find this new cheese.
+- He says to Hem, "Sometimes, Hem, things change and they're never the same again. This looks like one of those times. Life moves on. And so should we"
+- Hem thought, "Who moved my Cheese?"; Haw thought, "Why didn't I move with the Cheese sooner?"
+
+## Getting Out of The Comfort Zone
+
+**"What would I do if I weren't afraid?"**
+
+- Haw still feared going into the maze with so many unknowns.
+- Fear is not always bad. When you think that things are going to get worse, it can prompt you to take an action. But being too afraid or fearful, can keep you from taking any action at all.
+- When Haw felt these fears going in a certain direction, he took a deep breath and faced it by going in that direction.
+- He decided that if this were to happen to him ever again, he would get out of his comfort zone and adapt to change sooner.
+- He wished to find enough cheese and take some back to Hem but he didn't feel confident enough that Hem would still agree to take this confusing path in the maze.
+- It was not easy to find new cheese. He found it very challenging. Sometimes he thought if it was even a good idea to start finding new cheese. But as soon as he had discouraging thoughts, he negated them by reminding himself what he was doing and how it was much better than staying at Cheese Station C.
+- He also realized that the old cheese didn't just disappear, it was getting smaller every day. He was just not paying attention. It was growing old as well.
+
+**"When you stop being afraid, you feel good!"**
+
+**"Imagining yourself enjoying new cheese leads you to it"**
+
+## Positive Shift in Haw
+
+**The quicker you let go of old cheese, the sooner you find new cheese""**
+
+**"It is safer to search in the maze than remain in a cheeseless situation"**
+
+- Haw was finding bits and pieces of cheese in every station
+- He even brought back some to Hem but Hem refused to take it. Still denying the change. "I want my cheese", he said.
+- Haw was disappointed by Hem's response but he left to find more cheese.
+- He realized that it was not just the cheese that was making him happy, it was also the fact that he was not run by his fears that made him happy.
+- Haw realizes that it is natural for changes to occur continuously.
+- His old thinking was clouded by his fears.
+- His new beliefs were also introducing new behaviours.
+- He didn't behave the same every time he encountered a new empty Cheese Station.
