@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "222ee8ad29b60497",
+        "id": "fe7b2f2bddfe1dab",
         "type": "tabs",
         "children": [
           {
-            "id": "1fafd52f9f8fc21c",
+            "id": "950cf411dd449e6c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -58,6 +58,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bf7e5b9542da0beb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -138,17 +146,42 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fafd52f9f8fc21c",
+  "active": "950cf411dd449e6c",
   "lastOpenFiles": [
-    "Tech/Developer Productivity & Wellbeing.md",
+    "Tech/Kotlin/type-checking-casting.md",
+    "Tech/Kotlin/string-template.md",
+    "Tech/Kotlin/raw-strings.md",
+    "Tech/Kotlin/object-equality-differences-with-java.md",
+    "Tech/Kotlin/null-references.md",
+    "Tech/Kotlin/compilation.md",
+    "Tech/Kotlin/built-in-datatypes.md",
+    "Tech/Kotlin/basic-differences-with-java.md",
+    "Tech/Kotlin/arrays.md",
+    "Tech/Kotlin",
     "Philosophy/Books/Stillness is the Key.md",
+    "Books/Philosophy/Stillness is the Key.md",
+    "Books/Philosophy",
+    "Books/Self Help/Who Moved My Cheese?.md",
+    "Books/Self Help",
+    "Tech/kotlin/type-checking-casting.md",
+    "Tech/kotlin/string-template.md",
+    "Tech/kotlin/raw-strings.md",
+    "Tech/kotlin/object-equality-differences-with-java.md",
+    "Tech/kotlin/null-references.md",
+    "Tech/kotlin/compilation.md",
+    "Tech/kotlin/built-in-datatypes.md",
+    "Tech/kotlin/basic-differences-with-java.md",
+    "Tech/kotlin/arrays.md",
+    "Tech/kotlin",
+    "Philosophy/Books/Self Help/Who Moved My Cheese?.md",
+    "Philosophy/Books/Self Help",
+    "Books",
+    "Tech/Developer Productivity & Wellbeing.md",
     "Screenshot 2023-04-12 at 12.21.56 PM.png.md",
     "Tech/SOLID Principles.md",
     "Philosophy/Untitled.md",
     "Philosophy/Books",
     "Philosophy",
-    "Tech",
-    "Untitled.md",
-    "2023-01-30.md"
+    "Tech"
   ]
 }

@@ -78,7 +78,7 @@
 > Summary: Try to attain moments of silence whenever possible even if its for shorter durations and try to think deep into your lives or about whatever it is that needs thinking
 
 - Silence can be hard to achieve in this day and age because of all the inputs we receive, all the noise around us, all the people around us.
-- Silence doesn't necessarily have to be absence of sound. I think it's the absense of noise. You could be listening to classical music or the sound of the wind and still feel a sense of silence and focus on your thoughts.
+- Silence doesn't necessarily have to be absence of sound. I think it's the absence of noise. You could be listening to classical music or the sound of the wind and still feel a sense of silence and focus on your thoughts.
 - Absence of voices helps
 
 
