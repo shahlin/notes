@@ -55,7 +55,7 @@
 
 ## Positive Shift in Haw
 
-**The quicker you let go of old cheese, the sooner you find new cheese""**
+**"The quicker you let go of old cheese, the sooner you find new cheese"**
 
 **"It is safer to search in the maze than remain in a cheeseless situation"**
 
@@ -67,3 +67,33 @@
 - His old thinking was clouded by his fears.
 - His new beliefs were also introducing new behaviours.
 - He didn't behave the same every time he encountered a new empty Cheese Station.
+
+**"Noticing small changes early helps you adapt to the bigger changes that are to come"**
+
+## Haw Finds Cheese!
+- Haw finds Cheese Station N where Sniff and Scurry are there and they celebrate all the cheese they've found.
+- Haw realizes that, along with other things, him laughing at his situation (of waiting for old cheese to reappear) helped him change.
+- He learns from Sniff and Scurry:
+	- They keep life simple
+	- They didn't over-analyze
+	- They didn't over complicate things
+	- When situation changed, they moved
+- He realized that you could learn to deal with change and that nothing gets better until you change
+- He knew that some fears should be respected as it keeps you out of danger. But most of them are irrational, they keep us from changing.
+
+## The Handwritings on the Wall
+
+1. Change Happens
+	- *They keep moving the cheese*
+2. Anticipate Change
+	- *Get ready for the cheese to move*
+3. Monitor Change
+	- *Smell the cheese often so you know when it is getting old*
+4. Adapt to Change Quickly
+	- *The quicker you let go of old cheese, the sooner you find new cheese*
+5. Change
+	- *Move with the cheese*
+6. Enjoy Change!
+	- *Savor the adventure and enjoy the taste of new cheese*
+7. Be Ready to Change Quickly and Enjoy it Again and Again
+	- *They keep moving the cheese*
