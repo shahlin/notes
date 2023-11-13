@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tech/Integrations/Google APIs and OAuth 2.0.md",
+                "file": "Tech/Domain Driven Design.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tech/Integrations/Google APIs and OAuth 2.0.md",
+                "file": "Tech/Domain Driven Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tech/Integrations/Google APIs and OAuth 2.0.md",
+                "file": "Tech/Domain Driven Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tech/Integrations/Google APIs and OAuth 2.0.md"
+                "file": "Tech/Domain Driven Design.md"
               }
             }
           },
@@ -166,8 +166,8 @@
   },
   "active": "950cf411dd449e6c",
   "lastOpenFiles": [
-    "Books/Self Help/Who Moved My Cheese?.md",
     "Tech/Integrations/Google APIs and OAuth 2.0.md",
+    "Books/Self Help/Who Moved My Cheese?.md",
     "Tech/Integrations",
     "Untitled.md",
     "Goal Setting and Impact of self-reflection for Developers.md",
