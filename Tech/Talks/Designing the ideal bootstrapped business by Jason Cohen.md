@@ -1,3 +1,5 @@
+Source: https://www.youtube.com/watch?v=otbnC2zE2rw
+
 # Revenue model
 ## Customers
 1. Start with 150 customers as a goal
