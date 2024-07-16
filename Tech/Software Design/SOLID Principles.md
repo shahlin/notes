@@ -160,7 +160,7 @@ class InsurancePremiumDiscountCalculator {
 	}
 }
 
-class InsuranceCustomerProfile {
+interface InsuranceCustomerProfile {
 	public boolean isLoyal();
 }
 
