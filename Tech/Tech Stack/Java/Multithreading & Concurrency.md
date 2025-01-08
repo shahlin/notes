@@ -16,14 +16,14 @@
 ## Thread Coordination
 ### Two Ways of Creating a Thread
 1. Inheriting Thread Class / Runnable Class
-```java
-class MyThread extends Thread {
-    @Override
-    public void run() {
-        // Do some work   
+    ```java
+    class MyThread extends Thread {
+        @Override
+        public void run() {
+            // Do some work   
+        }
     }
-}
-```
+    ```
 2. Implementing Runnable
     ```java
     class Example {
@@ -55,6 +55,8 @@ class MyThread extends Thread {
 - The `join` method throws `InterruptedException` which needs to be handled
 
 ## Performance Optimization
+### Latency
+- Splitting tasks and running them in different threads can improve latency
 - When splitting tasks into separate threads, always keep in mind the cost of it
 - Sometimes, single threaded executions are faster than multithreaded ones
 - More threads than cores can be counterproductive
@@ -65,3 +67,10 @@ class MyThread extends Thread {
     - Time until the last thread finishes and signals
     - Time until the aggregating thread runs
     - Aggregation of subresults into single result
+- Summary: We get lower latency if we use the same number of threads as physical cores. After that, the increase in threads does not add any benefit
+
+### Throughput
+- Throughput measures the number of tasks completed in a given period
+- Measured in tasks per time unit
+- Can use Apache JMeter to test throughput or performance in general
+- Summary: We get higher throughput if the number of threads is same as physical cores (and then a little more if the count of threads is same as number of virtual cores). After that, the increase in threads does not provide any improvement
