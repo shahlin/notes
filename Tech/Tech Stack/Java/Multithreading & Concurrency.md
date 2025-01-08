@@ -74,3 +74,131 @@
 - Measured in tasks per time unit
 - Can use Apache JMeter to test throughput or performance in general
 - Summary: We get higher throughput if the number of threads is same as physical cores (and then a little more if the count of threads is same as number of virtual cores). After that, the increase in threads does not provide any improvement
+
+## Data Sharing b/w Threads
+### Stack
+- Each thread has it's own stack
+- When the execution gets into a method, a stack frame is created for that method
+- The stack frame contains all the local variables to that method
+- The data from a stack frame is not shared with another stack frame
+- Once the method returns, the stack frame is deleted/popped - Follows last in first out principle of stacks
+- If we go deep in the method calling hierarchy (like when we use recursion), we may get a StackOverflow exception
+
+### Heap
+- Process specific data is stored in the heap and is accessible by all threads
+- Any object that is instantiated with the `new` keyword is stored in a heap
+- Example: String, Object, Collection
+- Members/Properties of a class are stored in the heap
+- Static properties are also stored in the heap
+- Heap is managed by garbage collector
+- References to objects can be allocated in a Stack while the object can be present in the heap. However if the references are members of a class (class property), they can be allocated in a heap
+
+### Resource Sharing
+- What is a resouce?
+    - Variables
+    - Data structure
+    - File or connection handles
+    - Message or queues
+    - Any objects
+- Sharing resources can be important to efficiently/concurrently process the incoming requests. For examples, in an HTTP server, there might be _n_ requests coming in and all of them might be accessing the database (the shared resource). If each request had to wait for the other request to finish accessing the database, the application would become slow.
+- One of the challenges in resource sharing:
+    - If multiple threads access and modify a shared resource (like a class property), the value stored might be incorrect
+    - For example, if a class property is being incremented (`var++`) by multiple threads, there might be inconsistent result
+    - This is because, an increment process is 3 steps.
+        1. Get the value of the variable
+        2. Increment the value of the variable by 1
+        3. Store the incremented value back in the variable
+    - Threads might be moved to a sleeping state while others run at any point in the above 3 steps. Hence there might be inconsistent results.
+    - This is an example of a non atomic operation
+
+## Critical Section & Synchronization
+### Critical Section
+- Critical section is a block of code that we want to protect from threads other than the one that's currently executing it
+- For example, an increment operation. If Thread A is executing the incrementing operation, we don't want any other threads executing it. Other threads must wait until Thread A is done executing. Once it's done, the next thread can access this critical section
+
+### Synchronized - Monitor
+- The `synchronized` keyword in Java allows us to make sure that a method is only accessed by a single thread at a given time
+- If multiple methods in a class are `synchronized`, all of those methods can only be accessed by a single thread. That's because the `synchronized` is applied on an object. It's like a door to a room. If the room door is locked, all the doors inside that room are locked too. This way of locking is called a **Monitor**.
+    ```java
+    public class Example {
+        private int items = 0;
+
+        public synchronized void increment() {
+            items++;
+        }
+        
+        public synchronized void decrement() {
+            items--;
+        }
+    }
+    ```
+
+### Synchronized - Lock
+- We can also use synchronized on a specific block of code instead of an entire method
+- The benefits of this is that, we're not locking the entire method. We're only locking specific blocks.
+- For example, we can create 2 lock objects and use the `synchronized` block on each of them in different code blocks. This would mean that if Thread A is using the block locked by lock 1, Thread B can still access the block locked by lock 2
+- Specifying `synchronized(this)` is same as the first way wherein the entire object is locked
+    ```java
+    public class Example {
+        private int items = 0;
+        private Object lock1 = new Object();
+        private Object lock2 = new Object();
+
+        public void increment() {
+            synchronized(lock1) {
+                items++;
+            }
+        }
+        
+        public void decrement() {
+            synchronized(lock2) {
+                items--;
+            }
+        }
+    }
+    ```
+
+### Why not `synchronized` everything?
+- Excessive synchronization can be bad as it's just as running the application in a single threaded way. Since only one thread can perform operations on a class if all of it's methods have `synchronized`
+- Additionally, it's worse than single threaded applications because there's the cost of spinning up a thread and managing it (as seen in the above sections)
+
+### Atomic Operations
+1. All reference assignments are atomic (like setters)
+2. All assignments to primitive types are safe except `long` and `double` - Read/Writes to int, short, byte, float, char, boolean are atomic
+3. All assignments to `long` and `double` using the `volatile` keyword (Note: only assignments are atomic, operations on it are not)
+
+## Two Common Issues in Multithreaded Applications
+### Race Condition
+- Condition where multiple threads are accessing a shared resource
+- At least one of the thread is modifying the shared resource
+- The timing of threads' scheduling may cause incorrect results
+- The core of the problem is non atomic operations performed on the shared resource
+- Using `synchronized` solves the issue of race condition but has a performance penalty
+- For `long` and `double` assignments, we can use `volatile`
+
+### Data Race
+- When a program contains two conflicting accesses that are not ordered by a happens-before relationship, it is said to contain a data race
+- Basically, compilers sometimes execute instructions in a non-linear order for performance reasons. For example, the code below:
+    ```java
+    public class Example {
+        private int x = 0;
+        private int y = 0;
+    
+        private void increment() {
+            x++;
+            y++;
+        }
+        
+        private void checkDataRace() {
+            if (y > x) {
+                throw new Exception("Data race occurred");
+            }
+        }
+    }
+    ```
+- Technically, the `checkDataRace` should never throw an error because `x` should always be greater than `y`. But since the order of execution is not guaranteed, it is possible that we get an exception
+- This is called a Data Race
+- Using `synchronized` solves the issue of race condition but has a performance penalty
+- Instead, we can use the `volatile` keyword to avoid Data Races
+
+> Note: As a rule of thumb, every shared variable (modified by at least one thread) should be either (a) guarded by a `synchronized` block or any type of lock (b) or declared `volatile`
