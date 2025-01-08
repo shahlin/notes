@@ -167,7 +167,7 @@
 2. All assignments to primitive types are safe except `long` and `double` - Read/Writes to int, short, byte, float, char, boolean are atomic
 3. All assignments to `long` and `double` using the `volatile` keyword (Note: only assignments are atomic, operations on it are not)
 
-## Two Common Issues in Multithreaded Applications
+## Three Common Issues in Multithreaded Applications
 ### Race Condition
 - Condition where multiple threads are accessing a shared resource
 - At least one of the thread is modifying the shared resource
@@ -202,3 +202,23 @@
 - Instead, we can use the `volatile` keyword to avoid Data Races
 
 > Note: As a rule of thumb, every shared variable (modified by at least one thread) should be either (a) guarded by a `synchronized` block or any type of lock (b) or declared `volatile`
+
+### Deadlock
+- In a simple scenario, a deadlock occurs when Thread A has locked Resource A and is waiting to use Resource B but Thread B has locked Resource B and is waiting to use Resource A
+- So both threads are waiting on each other and will always be stuck in this state
+- This is applicable with more threads too
+
+![Screenshot 2025-01-08 at 9 01 04 PM](https://github.com/user-attachments/assets/210683a5-613d-4e54-86b0-b4a6946cb75c)
+
+- Conditions for a deadlock to occur:
+    - **Mutual Exclusion** - Only one thread can have exclusive access to a resource
+    - **Hold and Wait** - At least one thread is holding a resource and is waiting on another resource
+    - **Non-preemptive allocation** - A resource is released only after the thread is done using it
+    - **Circular wait** - A chain of at least two threads each one is holding one resource and waiting for another resource
+- If the above conditions are all true, it's a deadlock situation
+- One of the solutions is to avoid the circular wait. Which means that locks need to be acquired in the same order in every operation. For example, if an `add` method locks Resource A and Resource B sequentially, the `subtract` method should lock them in the same order so that, if Thread A has locked the Resource A, then Thread B can not continue until it has acquired Resource A
+
+
+# References
+- [Java Multithreading, Concurrency & Performance Optimization Course on Udemy](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/)
+- [Deadlock example image](https://jojozhuang.github.io/assets/images/programming/2412/deadlock.png)
