@@ -312,6 +312,24 @@
 - Note that, **only the operation itself is atomic, there's still race condition between 2 separate atomic operations**
 - `AtomicInteger` should only be used when atomic operations are needed. If used only by a single thread, it might add additional performance overhead
 
+## Virtual Threads
+- Introduced in JDK 21
+- Just like any other Java object on the heap
+- Platform threads in java (`Thread` class) are directly mapped to an OS thread. One-to-one relationship
+- The JVM creates a pool of platform threads which the virtual threads can mount onto. For example, if there are 4 virtual threads, the JVM might create 2 platform threads and mount the one performing the task to the platform thread. Once the virtual thread execution is blocked, JVM will unmount the virtual thread from the platform thread and save the stack snapshot on the  heap. Meanwhile, it will mount another virtual thread and continue execution. Once the blocked thread is unblocked, it will be mounted to the platform thread again
+- The platform thread containing a virtual thread is called a carrier thread
+- The developers have very little control over the carrier threads and scheduling them
+- If the virtual threads contains only CPU operations, it provides no performance benefit
+- If the virtual threads contains operations that are blocking, it improves performance
+- It's important to note that, if call took T seconds to execute before, it will still take the same time with virtual threads. There will be no impact on the latency. The only performance benefit to using virtual threads is gaining throughput
+- Thread per task with platform threads introduces context switches
+- Thread per task with virtual threads have only mounting/unmounting overhead
+
+### Best Practices
+- Never create fixed size pools of virtual threads (prefer Executors.newVirtualThreadPerTaskExecutor)
+- Virtual threads are always **daemon threads**. An attempt to set them as non daemon threads will throw an exception
+- Priorities cannot be set for virtual threads. The `setPriority(...)` doesn't do anything
+
 # References
 - [Java Multithreading, Concurrency & Performance Optimization Course on Udemy](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/)
 - [Deadlock example image](https://jojozhuang.github.io/assets/images/programming/2412/deadlock.png)
