@@ -260,6 +260,31 @@
 - If a `writeLock` is acquired, no thread can acquire a `readLock`
 - If at least one thread holds a `readLock`, no thread can acquire a `writeLock`
 
+## Inter-thread Communication
+### Semaphore
+- Can be used to restrict the number of 'users' to a particular resource or a group of resources
+- Unlike the locks that allow only one 'user' per resource
+- The semaphore can restrict any given number of users
+- Example: A parking lot with 8 spaces. We can allow up to 8 cars to enter the lot and park their cars. If all 8 spaces are taken, the next car to come needs to wait until one of the space is free
+- `Semaphore` is initialized with number of permits
+- A thread can acquire/release more than 1 permit at a time
+- Any thread can release a semaphore (no ownership)
+- Calling acquire on a semaphore that has already given all of its permits will result in blocking the thread until a semaphore is released by another thread
+
+### Condition Variable
+- Check condition, if it is not met, suspend the thread until the condition is met (mostly modified by another thread to meet the condition)
+    ```java
+    ReentrantLock lock = new ReentrantLock();
+    Condition condition = lock.newCondition();
+    ```
+- We can use the `await()` method on the condition to unlock a lock and wait until it is signalled. Basically, the await() method will unlock and suspend the thread until another thread signals it to run again (then it acquires the lock and runs again)
+- The `signal()` method on the condition wakes up a thread that's waiting on it. Note that, if multiple conditions are waiting for the signal, only one thread will process the signal and continue execution. To signal all threads, we can use `signalAll()`
+
+### Object Signalling
+- This is similar to the Condition Variable
+- Instead of `await()`, `signal()` and `signalAll()`, in case of Object, we use `wait()`, `notify()` and `notifyAll()`
+- We can use this on any object as all classes in Java inherit from the `Object` class
+
 # References
 - [Java Multithreading, Concurrency & Performance Optimization Course on Udemy](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/)
 - [Deadlock example image](https://jojozhuang.github.io/assets/images/programming/2412/deadlock.png)
