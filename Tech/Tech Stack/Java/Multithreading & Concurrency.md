@@ -218,6 +218,47 @@
 - If the above conditions are all true, it's a deadlock situation
 - One of the solutions is to avoid the circular wait. Which means that locks need to be acquired in the same order in every operation. For example, if an `add` method locks Resource A and Resource B sequentially, the `subtract` method should lock them in the same order so that, if Thread A has locked the Resource A, then Thread B can not continue until it has acquired Resource A
 
+## Advanced Locking
+### Reentrant Lock
+- Similar to the `synchronized` block but we have to lock and unlock the block explicitly
+- Disadvantage: We might forget to unlock a certain block of code once locked. Or there might be an unhandled exception that occurs which makes the unlock code unreachable
+- Solution to the above disadvantage: Make sure to surround the critical section in a `try` block and unlock the lock in the `finally` block
+    ```java
+    lockObject.lock();
+    try {
+        useSharedResource();
+    } finally {
+        lockObject.unlock();
+    }
+    ```
+
+#### Benefits
+1. Provides more control over locking
+2. Provides more operations like:
+    a. `getQueuedThreads()`
+    b. `getOwner()`
+    c. `isHeldByCurrentThread()`
+    d. `isLocked()`
+3. By default, both the `ReentrantLock` as well as `synchronized` keyword do not guarantee fairness. But with `ReentrantLock` we can enable fairness explicitly (though it comes with a cost)
+4. Provides the `lockInterruptibly()` method, which allows us to interrupt a thread (that is suspended) waiting to acquire a lock
+5. Provides the `tryLock()` method, which allows us to try and acquire the lock. If the lock is available, it returns `true`. If not, it returns `false` and does not get suspended, instead it moves on to the next instruction. The `tryLock()` method will never block execution
+    ```java
+    if (lockObject.tryLock()) {
+        try {
+            useSharedResource();
+        } finally {
+            lockObject.unlock();
+        }
+    } else { ... }
+    ```
+### ReentrantReadWriteLock
+- As long as they're not modifying the data, multiple reader threads should be able to access a shared resource at a given time
+- `synchronized` and `ReentrantLock` do not allow multiple readers to access a shared resource concurrently
+- The ReadWriteLocks are mostly not required if the read operations are small and quick
+- But if there are way too many read operations and they are not as fast, using `synchronized` or `ReentrantLock` can impact performance
+- Multiple reader threads can acquire a `readLock` but only a single writer thread can acquire a `writeLock`
+- If a `writeLock` is acquired, no thread can acquire a `readLock`
+- If at least one thread holds a `readLock`, no thread can acquire a `writeLock`
 
 # References
 - [Java Multithreading, Concurrency & Performance Optimization Course on Udemy](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/)
