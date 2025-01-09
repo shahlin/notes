@@ -5,9 +5,9 @@
 - Context switching between threads from the same process is cheaper than context switching between threads from different processes
 
 ### Thread Scheduling
-- First come first serve - Problem is if there's long running threads coming first, there will be a starvation wherein other threads will just be waiting (worst for UI threads because it makes the UI unresponsive)
-- Shortest job first - Problem is if we keep taking the shortest jobs first and they keep coming, the OS will never work on the large computation tasks (time consiming threads)
-- Epochs - Common used way in recent OSs. Divides time into small pieces called epochs. Multiple threads run within each epoch, every thread will be assigned a time slice, but not all threads necessarily finish their execution in this time and maybe some might not even be picked. OS assigns a dynamic priority value to each thread. Usually giving the UI threads more priority
+- **First come first serve** - Problem is if there's long running threads coming first, there will be a starvation wherein other threads will just be waiting (worst for UI threads because it makes the UI unresponsive)
+- **Shortest job first** - Problem is if we keep taking the shortest jobs first and they keep coming, the OS will never work on the large computation tasks (time consiming threads)
+- **Epochs** - Common used way in recent OSs. Divides time into small pieces called epochs. Multiple threads run within each epoch, every thread will be assigned a time slice, but not all threads necessarily finish their execution in this time and maybe some might not even be picked. OS assigns a dynamic priority value to each thread. Usually giving the UI threads more priority
 
 ### Why Multi-Process Architecutre over Multithreaded?
 - Security and stability are of higher importance
@@ -284,6 +284,33 @@
 - This is similar to the Condition Variable
 - Instead of `await()`, `signal()` and `signalAll()`, in case of Object, we use `wait()`, `notify()` and `notifyAll()`
 - We can use this on any object as all classes in Java inherit from the `Object` class
+
+## Lock-Free Algorithms
+### Issues with locks
+1. Deadlocks are generally unrecoverable. More locks in the application, higher chances of deadlocks
+2. Multiple threads using the same lock. If one thread holds the lock for very long, it will slow down all other threads
+3. Priority Inversion - Two threads sharing a single lock. If low priority thread acquires the lock, then the high priority thread will be blocked until the low priority thread releases the lock
+4. Thread not releasing a lock. If a thread dies, gets interrupted or forgets to release a lock. Blocks all threads forever. Usually solved with additional code like wrapping code around try/finally blocks
+5. Performance overhead over threads contending to acquire a lock
+    - Thread A acquires a lock
+    - Thread B tries to acquire a lock and gets blocked
+    - Thread B is scheduled out (context switch)
+    - Thread B is scheduled back (context switch)
+
+### CompareAndSet
+- Available in all Atomic classes
+- Compilesd into an atomic hardware operation
+- Basically, it's a 2 step process - `compareAndSet(T expectedValue, T newValue)`:
+    - Assigns new value if `current value` == `expected value`
+    - Ignores the new value if the `current value` != `expected value`
+
+### AtomicInteger
+- Allows handling integer operations like `counter++` in an atomic thread-safe manner
+- The `AtomicInteger` class provides methods to perform such operations. Example: `incrementAndGet()`
+- It's simpler than using locks/synchronization
+- No need to worry about race condition or data races
+- Note that, **only the operation itself is atomic, there's still race condition between 2 separate atomic operations**
+- `AtomicInteger` should only be used when atomic operations are needed. If used only by a single thread, it might add additional performance overhead
 
 # References
 - [Java Multithreading, Concurrency & Performance Optimization Course on Udemy](https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/)
